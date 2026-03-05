@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poiupv.FXMLProblemasController">
+   <children>
+      <Label fx:id="pregunta" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="550.0" text="Enunciado pregunta" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="150.0" prefWidth="454.0" spacing="10.0">
+         <children>
+            <RadioButton fx:id="opcion1" mnemonicParsing="false" text="Opción 1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="opciones" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="opcion2" mnemonicParsing="false" text="Opción 2" toggleGroup="$opciones" />
+            <RadioButton fx:id="opcion3" mnemonicParsing="false" text="Opción 3" toggleGroup="$opciones" />
+            <RadioButton fx:id="opcion4" mnemonicParsing="false" text="Opción 4" toggleGroup="$opciones" />
+         </children>
+      </VBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="corregirButton" mnemonicParsing="false" onAction="#handleCorregir" prefHeight="30.0" prefWidth="70.0" styleClass="btn-primary" stylesheets="@../resources/estilos.css" text="Corregir" />
+            <Button fx:id="siguiente" mnemonicParsing="false" onAction="#handleSiguiente" prefHeight="30.0" prefWidth="70.0" styleClass="btn-primary" stylesheets="@../resources/estilos.css" text="Siguiente" />
+            <Label fx:id="resultado" prefHeight="28.0" prefWidth="179.0" text="Resultado">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <ComboBox fx:id="selectorPregunta" prefHeight="26.0" prefWidth="160.0" promptText="Seleccionar pregunta" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
