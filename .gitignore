@@ -1,0 +1,11 @@
+/build/
+/dist/
+/nbproject/private/
+/nbproject/Makefile-*.mk
+/nbproject/Package-*.bash
+*.class
+lib/sqlite-jdbc-*.jar
+*.db
+.DS_Store
+Thumbs.db
+*.swp

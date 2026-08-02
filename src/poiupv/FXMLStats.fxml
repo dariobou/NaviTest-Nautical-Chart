@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="400.0" spacing="15.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poiupv.FXMLStatsController">
+    <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #0685BC;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Mis estadísticas">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="350.0" spacing="20.0">
+         <children>
+            <DatePicker fx:id="filtroFecha" styleClass="date-picker" stylesheets="@../resources/estilos.css" />
+            <Button fx:id="buscarButton" mnemonicParsing="false" onAction="#filtrarSesiones" styleClass="btn-primary" stylesheets="@../resources/estilos.css" text="Buscar" />
+         </children>
+      </HBox>
+      <TableView id="table-view" fx:id="tabla" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="350.0">
+        <columns>
+          <TableColumn fx:id="filaFecha" prefWidth="167.20000910758972" sortType="DESCENDING" style="-fx-background-color: #92c5fc;" text="Fecha y hora" />
+          <TableColumn fx:id="filaAciertos" prefWidth="90.0" sortType="DESCENDING" style="-fx-background-color: #ff6961;" text="Aciertos" />
+            <TableColumn fx:id="filaFallos" prefWidth="90.0" sortType="DESCENDING" style="-fx-background-color: #88e788;" text="Fallos" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
